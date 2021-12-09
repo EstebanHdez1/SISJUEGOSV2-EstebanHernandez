@@ -138,5 +138,13 @@ public class View1 extends JFrame {
 		}
 	}
 	
+	public void mostrarTorneo(ArrayList<TorneoDTO> tor) {
+		getPanelTorneo().getTxtNombre().setToolTipText("");
+		for (int i = 0; i < tor.size(); i++) {
+			getPanelTorneo().getTxtNombre().append(String.valueOf(tor.get(i).getNombret()) + "\n");
+		}
+		
+	}
+	
 	
 }

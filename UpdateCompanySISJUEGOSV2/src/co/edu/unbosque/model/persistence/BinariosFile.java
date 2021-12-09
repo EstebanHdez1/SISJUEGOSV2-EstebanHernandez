@@ -8,6 +8,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 import javax.swing.JComboBox;
+import javax.swing.JTextArea;
 
 
 
@@ -154,9 +155,9 @@ public class BinariosFile {
 		
 	}
 	
-	public String escribirTorneo(JComboBox<String> jComboBox) {
+	public String escribirTorneo(String nombret) {
 		String mensaje = "Registro de Torneo Ingresado!";
-		TorDAO.crearTorneo(jComboBox);
+		TorDAO.crearTorneo(nombret);
 		Torneo = TorDAO.getTorneos();
 		try {
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(rutaTor));
@@ -253,6 +254,11 @@ public class BinariosFile {
 
 	public void setTorneo(ArrayList<TorneoDTO> torneo) {
 		Torneo = torneo;
+	}
+
+	public String escribirTorneo(String string, String string2) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 

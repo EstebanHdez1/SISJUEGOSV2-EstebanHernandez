@@ -2,24 +2,22 @@ package co.edu.unbosque.model.persistence;
 
 import java.io.Serializable;
 
-import javax.swing.JComboBox;
-
 public class TorneoDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private JComboBox<String> nombret;
+	private String nombret;
 	
-	public TorneoDTO(JComboBox<String> string) {
-		this.nombret = string;
+	public TorneoDTO(String jTextArea) {
+		this.nombret = jTextArea;
 	}
 	
 	
 	
-	public JComboBox<String> getNombret() {
+	public String getNombret() {
 		return nombret;
 	}
 
-	public void setNombret(JComboBox<String> nombret) {
+	public void setNombret(String nombret) {
 		this.nombret = nombret;
 	}
 

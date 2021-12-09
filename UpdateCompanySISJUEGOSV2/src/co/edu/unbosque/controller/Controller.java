@@ -57,12 +57,26 @@ public class Controller implements ActionListener {
 							gui1.getPanelEntrada().getGeneroJ1().getSelectedItem().toString(),
 							Double.parseDouble(gui1.getPanelEntrada().getPuntajeJ1().getText()),
 							gui1.getPanelEntrada().getNombreJ2().getText(),
-							Integer.parseInt(gui1.getPanelEntrada().getEdadJ2().getText()),
-							gui1.getPanelEntrada().getGeneroJ2().getSelectedItem().toString(),
+							Integer.parseInt(gui1.getPanelEntrada().getEdadJ2().getText()),gui1.getPanelEntrada().getGeneroJ2().getSelectedItem().toString(),
 							Double.parseDouble(gui1.getPanelEntrada().getPuntajeJ2().getText())));
+							
+			
 			gui1.escribirMensaje(
 					bd.getBf().escribirJuego(gui1.getPanelEntrada().getTxtNJuego().getSelectedItem().toString(),
 							gui1.getPanelEntrada().getTxtTipo().getText()));
+			
+		//	gui1.escribirMensaje(
+		//			bd.getBf().escribirTorneo(gui1.getPanelTorneo().getTxtNombre().getSelectedText().toString(),
+			//				gui1.getPanelTorneo().getTxtNombre().getText()));
+			
+		}
+		
+		if (evento.getActionCommand().equals(gui3 .getPanelTorneo().GUARDAR_Tor)) {
+			
+			gui3.escribirMensajet(
+					bd.getBf().escribirTorneo(gui3.getPanelTorneo().toString(),
+							gui3.getPanelTorneo().getTxtNombre().getText()));
+			
 		}
 
 		if (evento.getActionCommand().equals(gui1.getPanelEntrada().LEER_REG)) {
@@ -74,7 +88,7 @@ public class Controller implements ActionListener {
 			gui1.mostrarPartida(bd.getBf().getPartida());
 			gui1.mostrarJugador(bd.getBf().getJugador());
 			gui1.mostrarJuego(bd.getBf().getJuego());
-			gui3.mostrarTorneo(bd.getBf().getTorneo());
+			gui1.mostrarTorneo(bd.getBf().getTorneo());
 		}
         //--------------
 		if (evento.getActionCommand().equals(gui1.getPanelEntrada().TOR)) {
@@ -103,22 +117,11 @@ public class Controller implements ActionListener {
 
 		}
 		
-	//	if (evento.getActionCommand().equals(gui3.getTpane().LEER_Tor)) {
-			
-	//		bd.getBf().leerTorneo();
-	//		gui3.mostrarTorneo(bd.getBf().getTorneo());
-			
-	//	}
 		
 		if (evento.getActionCommand().equals(gui3.getPanelTorneo().GUARDAR_Tor)) {
 
-			gui3.escribirMensajet(bd.getBf().escribirTorneo(
-					gui3.getPanelTorneo().getNombrec()));
-			gui3.escribirMensajet(
-					bd.getBf().escribirTorneo(gui3.getPanelTorneo().getNombrec()));
-			gui3.escribirMensajet(
-					bd.getBf().escribirJuego(gui3.getPanelTorneo().toString(),
-							gui3.getPanelTorneo().getNombrec().getToolTipText()));
+			
+			
 		}
 		
 	}

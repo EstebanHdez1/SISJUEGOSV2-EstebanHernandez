@@ -7,7 +7,8 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.JTextArea;
+
 
 public class PanelTorneo extends JPanel{
 
@@ -16,6 +17,7 @@ public class PanelTorneo extends JPanel{
 	private JButton butGuardar;
 	private JButton butActua;
 	private JButton butLeer;
+	private JTextArea txtNombre;
 	private JComboBox<String> Nombrec;
 	public static final String GUARDAR_Tor = "GuardarReg";
 	public static final String LEER_Tor = "LeerReg";
@@ -26,15 +28,15 @@ public class PanelTorneo extends JPanel{
 		setLayout(null);
 		
 		butActua = new JButton("Cerrar");
-		butActua.setBounds(30, 90, 140, 20);
+		butActua.setBounds(10, 90, 140, 20);
 		butActua.setActionCommand(Actua);
 		
 		butGuardar = new JButton("Guardar");
-		butGuardar.setBounds(300, 90, 140, 20);
+		butGuardar.setBounds(165, 90, 140, 20);
 		butGuardar.setActionCommand(GUARDAR_Tor);
 		
 		butLeer = new JButton("Leer");
-		butLeer.setBounds(190, 90, 90, 20);
+		butLeer.setBounds(320, 90, 90, 20);
 		butLeer.setActionCommand(LEER_Tor);
 		
 		Nombret = new JLabel("Nombre");
@@ -49,12 +51,17 @@ public class PanelTorneo extends JPanel{
 		Nombrec.addItem("Torneo fase B");
 		Nombrec.addItem("Torneo fase C");
 		
+		txtNombre = new JTextArea("");
+		txtNombre.setForeground(Color.BLACK);
+		txtNombre.setBackground(Color.WHITE);
+		txtNombre.setEditable(false);
+		
 		
 		add(butLeer);
 		add(butGuardar);
 		add(butActua);
 		add(Nombret);
-		//add(txtnombret);
+		add(txtNombre);
 		add(Nombrec);
 		
 	}
@@ -99,6 +106,16 @@ public class PanelTorneo extends JPanel{
 
 	public void setButLeer(JButton butLeer) {
 		this.butLeer = butLeer;
+	}
+
+
+
+	public JTextArea getTxtNombre() {
+		return txtNombre;
+	}
+
+	public void setTxtNombre(JTextArea txtNombre) {
+		this.txtNombre = txtNombre;
 	}
 	
 

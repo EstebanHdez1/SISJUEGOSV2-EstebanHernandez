@@ -1,15 +1,12 @@
 package co.edu.unbosque.view;
 
 import java.awt.BorderLayout;
-import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JLayeredPane;
 import javax.swing.JOptionPane;
 import co.edu.unbosque.controller.Controller;
-import co.edu.unbosque.model.persistence.JuegoDTO;
-import co.edu.unbosque.model.persistence.JugadorDTO;
-import co.edu.unbosque.model.persistence.TorneoDTO;
+
 
 public class View3 extends JFrame{
 
@@ -38,13 +35,7 @@ public class View3 extends JFrame{
 		Tpane.getButLeer().addActionListener(control);
 	}
 	
-	public void buscarTorneo(ArrayList<TorneoDTO> Torneos) {
-		for (int i = 0; i < Torneos.size(); i++) {
-			if (Torneos.get(i).getNombret() == (Tpane.getNombrec())) {
-				
-			}
-		}
-	}
+
 
 	public JLayeredPane getLpane() {
 		return lpane;
@@ -77,13 +68,6 @@ public class View3 extends JFrame{
 		this.panelTorneo = panelTorneo;
 	}
 
-	public void mostrarTorneo(ArrayList<TorneoDTO> tor) {
-		getPanelTorneo().getToolTipText();
-		
-		for (int i = 0; i < tor.size(); i++) {
-		//	getPanelTorneo().getToolTipText().append(String.valueOf(tor.get(i).getNombret()) + "\n");
-		}
-	}
 	
 	
 }
