@@ -37,6 +37,7 @@ public class BinariosFile {
 		Partida = new ArrayList<>();
 		Jugador = new ArrayList<>();
 		Juego = new ArrayList<>();
+		Torneo = new ArrayList<>();
 		ParDAO = new PartidaDAO();
 		JugDAO = new JugadorDAO();
 		JueDAO = new JuegoDAO();

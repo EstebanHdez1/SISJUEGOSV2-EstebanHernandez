@@ -65,9 +65,9 @@ public class Controller implements ActionListener {
 					bd.getBf().escribirJuego(gui1.getPanelEntrada().getTxtNJuego().getSelectedItem().toString(),
 							gui1.getPanelEntrada().getTxtTipo().getText()));
 			
-		//	gui1.escribirMensaje(
-		//			bd.getBf().escribirTorneo(gui1.getPanelTorneo().getTxtNombre().getSelectedText().toString(),
-			//				gui1.getPanelTorneo().getTxtNombre().getText()));
+			gui1.escribirMensaje(
+					bd.getBf().escribirTorneo(gui1.getPanelTorneo().getTxtNombre().getSelectedText().toString(),
+							gui3.getPanelTorneo().getTxtNombre().getText()));
 			
 		}
 		
