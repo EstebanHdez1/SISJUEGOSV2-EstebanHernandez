@@ -71,6 +71,8 @@ public class Controller implements ActionListener {
 			
 		}
 		
+		//Boton de guardado teoneos
+		
 		if (evento.getActionCommand().equals(gui1 .getPanelTorneo().GUARDAR_Tor)) {
 			
 			gui3.escribirMensajet(
